@@ -21,5 +21,16 @@
         support: Support;
     }
 
+    export interface RequestCreate {
+        name: string;
+        job: string;
+    }
+
+    export interface RespostaCreate {
+        name: string;
+        job: string;
+        id: string;
+        createdAt: Date;
+    }
 
 
