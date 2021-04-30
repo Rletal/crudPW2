@@ -1,0 +1,11 @@
+table {
+    width: 100%;
+}
+thead td{    
+    border: 2px solid black;
+}
+
+table thead{
+    background-color: darkgreen;
+
+}
