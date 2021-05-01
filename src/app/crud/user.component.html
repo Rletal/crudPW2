@@ -4,11 +4,14 @@
     <thead>
         <td>Nome</td>
         <td>Sobrenome</td>
+        <td>Opções</td>
     </thead>
     <tbody>
         <tr *ngFor="let user of respostaUser.data">
             <td>{{user.first_name}}</td>
             <td>{{user.last_name}}</td>
+            <td><a routerLink="/User/update/{{user.id}}">Editar</a> |
+            <a routerLink="/User/delete/{{user.id}}">Deletar</a></td>
         </tr>
     </tbody>    
 </table>

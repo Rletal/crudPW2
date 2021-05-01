@@ -9,12 +9,6 @@
 <label for=""> Sobrenome
     <input name="sobrenome"  [(ngModel)]="request.job">   
 </label>
-<p><button (click)="save()">Criar</button></p>
-</div>
-
-<div *ngIf = "response">
-<label>Nome: {{response.name}}</label><br>
-<label>Sobrenome: {{response.job}}</label><br>
-<label>ID: {{response.id}}</label><br>
-<label>Criado em: {{response.createdAt}}</label>
+<p><button (click)="save()">Criar</button>
+<button (click)="cancel()">Cancelar</button></p>
 </div>

@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
-import { RequestCreate, RespostaCreate, respostaUser } from './user.model';
+import { RequestCreate, ResponseUpdate, ResponseUser, RespostaCreate, respostaUser, ResquestUpdate } from './user.model';
 import { HttpClient } from "@angular/common/http";
 @Injectable({
   providedIn: 'root'
@@ -15,8 +15,20 @@ export class UserService {
 
   criarUser(request: RequestCreate): Observable<RespostaCreate>{
     return this.http.post<RespostaCreate>(this.URL, request)
-
-
   }
 
+  getUserId(id: String): Observable<ResponseUser> {
+    const _url = `${this.URL}/${id}`;
+    return this.http.get<ResponseUser>(_url);
+  }
+  
+  updateUser(id: String, request: ResquestUpdate): Observable<ResponseUpdate> {
+    const _url = `${this.URL}/${id}`;
+    return this.http.put<ResponseUpdate>(_url, request);
+  }
+
+  deleteUser(id: String): Observable<any> {
+    const _url = `${this.URL}/${id}`;
+    return this.http.delete<any>(_url);
+  }
 }

@@ -7,13 +7,15 @@ import { CommonModule } from '@angular/common';
 import { UserModule } from './crud/user.module';
 import { CreateUsuarioModule } from './crud/create-usuario/create-usuario.module';
 import { FormsModule } from '@angular/forms';
+import { UpdateUserModule } from './crud/update-user/update-user.module';
+import { DeleteUserModule } from './crud/delete-user/delete-user.module';
 
 
 
 @NgModule({
   declarations: [
     AppComponent
-   
+    
   ],
   imports: [
     BrowserModule,
@@ -21,7 +23,9 @@ import { FormsModule } from '@angular/forms';
     HttpClientModule,
     CommonModule,
     UserModule,
-    CreateUsuarioModule
+    CreateUsuarioModule,
+    UpdateUserModule,
+    DeleteUserModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -1,0 +1,14 @@
+<h2>Atualizar User</h2>
+
+
+<div *ngIf="request">
+<label for=""> Nome:
+    <input name="nome" [(ngModel)]="request.name">
+</label>
+<br>
+<label for=""> Emprego:
+    <input name="emprego"  [(ngModel)]="request.job">   
+</label>
+<p><button (click)="atualizar()">Atualizar</button>
+<button (click)="cancel()">Cancelar</button></p>
+</div>

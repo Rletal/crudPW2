@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { RequestCreate, RespostaCreate } from '../user.model';
 import { UserService } from '../user.service';
 
@@ -17,7 +18,7 @@ export class CreateUsuarioComponent implements OnInit {
   
   response: RespostaCreate;
 
-  constructor(private userService: UserService) { }
+  constructor(private userService: UserService, private _route: Router) { }
 
   ngOnInit(): void {
   }
@@ -25,11 +26,14 @@ export class CreateUsuarioComponent implements OnInit {
   save(){
     this.userService.criarUser(this.request).subscribe(res =>{
       this.response= res
-
-
+      alert("Criado com sucesso.\n ID: " + this.response.id +
+      ", Nome: " + this.response.name + ", Sobrenome: " + this.response.job + ".");
+      this._route.navigate(['/User']);
     })
+  }
 
-
+  cancel() {
+    this._route.navigate(['/User']);
   }
 
 }

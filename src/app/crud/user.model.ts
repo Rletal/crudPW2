@@ -33,4 +33,18 @@
         createdAt: Date;
     }
 
+    export interface ResponseUser {
+        data: User
+    }
+    
+    export interface ResquestUpdate {
+        name: string;
+        job: string;
+    }
+    
+    export interface ResponseUpdate {
+        name: string;
+        job: string;
+        updatedAt: Date;
+    }
 
