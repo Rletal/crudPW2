@@ -1,21 +1,18 @@
-<h2>Deseja remover este usuário?</h2>
-
-<div *ngIf="user">
-    <label for=""> Id:
-        <span>{{user.id}}</span>
-    </label>
-    <br>
-    <label for=""> Nome:
-        <span>{{user.first_name}}</span>
-    </label>
-    <br>
-    <label for=""> Sobrenome:
-        <span>{{user.last_name}}</span>
-    </label>
-    <br>
-    <label for=""> Emprego:
-        <span>{{user.job}}</span>
-    </label>
-    <p><button (click)="delete()">Confirmar</button>
-    <button (click)="cancel()">Cancelar</button></p>
+<h2 class="ml-3 text-white">Deseja remover este usuário?</h2>
+<div class="ml-3" *ngIf="user">
+    <div class=" card " style="width: 18rem;">
+        <ul class="list-group list-group-flush">
+            <li class="list-group-item bg-dark border-light text-light"> Id: {{user.id}}</li>
+        
+            <li class="list-group-item bg-dark border-light text-light"> Nome: {{user.first_name}}</li>
+        
+            <li class="list-group-item bg-dark border-light text-light"> Sobrenome: {{user.last_name}}</li>
+        
+            <li class="list-group-item bg-dark border-light text-light"> Emprego: {{user.job}}</li>
+        </ul>
+    </div>
+    <div class="btn-group mt-3" role="group" aria-label="Basic example">
+        <button (click)="delete()" class="btn btn-outline-secondary text-white">Confirmar</button>
+        <button (click)="cancel()" class="btn btn-outline-danger">Cancelar</button>
+    </div>
 </div>

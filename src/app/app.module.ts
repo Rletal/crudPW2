@@ -9,6 +9,7 @@ import { CreateUsuarioModule } from './crud/create-usuario/create-usuario.module
 import { FormsModule } from '@angular/forms';
 import { UpdateUserModule } from './crud/update-user/update-user.module';
 import { DeleteUserModule } from './crud/delete-user/delete-user.module';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 
 
@@ -25,7 +26,8 @@ import { DeleteUserModule } from './crud/delete-user/delete-user.module';
     UserModule,
     CreateUsuarioModule,
     UpdateUserModule,
-    DeleteUserModule
+    DeleteUserModule,
+    NgbModule
   ],
   providers: [],
   bootstrap: [AppComponent]

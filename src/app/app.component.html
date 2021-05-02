@@ -1,9 +1,8 @@
-<h1>{{title}}</h1>
-
+<h1 class="text-light ml-3">{{title}}</h1>
     <nav>
-    <ul>  
-    <a routerLink="/User">Listar Usuarios</a>,  
-    <a routerLink="/User/create">Criar Usuarios</a>    
-    </ul>
+        <ul class="row justify-content-end mx-auto mt-n5">  
+            <a routerLink="/User" class="btn btn-outline-secondary text-white">Listar Usuarios</a> 
+            <a routerLink="/User/create" class="btn btn-outline-secondary text-white mr-4 ml-1">Criar Usuarios</a>    
+        </ul>
     </nav>
 <router-outlet></router-outlet>

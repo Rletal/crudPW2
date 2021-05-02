@@ -1,14 +1,19 @@
-<h2>Atualizar User</h2>
-
-
-<div *ngIf="request">
-<label for=""> Nome:
-    <input name="nome" [(ngModel)]="request.name">
-</label>
-<br>
-<label for=""> Emprego:
-    <input name="emprego"  [(ngModel)]="request.job">   
-</label>
-<p><button (click)="atualizar()">Atualizar</button>
-<button (click)="cancel()">Cancelar</button></p>
+<h2 class="ml-3 text-white" >Atualizar usuário</h2>
+<div class="ml-2" *ngIf="request">
+    <div class="form-group row mx-auto">
+        <label class="text-white col-sm-1 col-form-label" for="nome"> Nome: </label >
+            <div class="col-sm-5">
+                <input class="form-control position-absolute" name="nome" [(ngModel)]="request.name">
+            </div>
+    </div>
+    <div class="form-group row mx-auto">
+        <label class="text-white col-sm-1 col-form-label" for="nome"> Emprego: </label>
+        <div class="col-sm-5">
+            <input class="form-control position-absolute" name="emprego"  [(ngModel)]="request.job">   
+        </div>
+    </div>
+    <div class="btn-group ml-3" role="group" aria-label="Basic example">
+        <button (click)="atualizar()" class="btn btn-outline-secondary text-white">Atualizar</button>
+        <button (click)="cancel()" class="btn btn-outline-danger">Cancelar</button>
+    </div>
 </div>
